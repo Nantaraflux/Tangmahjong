@@ -1,0 +1,17 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Dependencies and generated local state
+node_modules/
+.sites-runtime/
+.DS_Store
+Thumbs.db
+
+# Local previews and scratch files
+work/
+outputs/
+*.log

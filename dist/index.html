@@ -10,37 +10,48 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./refined.css" /><link rel="stylesheet" href="./interactions.css" />
   </head>
-  <body>
-    <header class="site-header" id="top">
+  <body id="top">
+    <a class="skip-link" href="#main">Lewati ke konten</a>
+    <header class="site-header">
       <a class="brand" href="#top" aria-label="Tang Mahjong, kembali ke atas">
-        <img src="./assets/logo-white.png" alt="Tang Mahjong" />
+        <span class="logo-lockup"><img src="./assets/tang-logo-transparent.png" alt="Tang Mahjong" width="2172" height="724" /></span>
       </a>
       <nav aria-label="Navigasi utama">
         <a href="#collection">Koleksi</a>
-        <a href="#service">Layanan</a>
+        <a href="#service">Layanan</a><a href="#use-cases">Inspirasi</a><a href="#faq">FAQ</a>
         <a href="#contact" class="nav-cta">Konsultasi</a>
       </nav>
     </header>
 
-    <main>
+    <main id="main">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Premium automatic mahjong tables</p>
-          <h1>Ruang untuk bermain.<br /><em>Waktu untuk bersama.</em></h1>
+          <p class="hero-kicker">Meja mahjong otomatis premium</p>
+          <h1>Meja mahjong otomatis.<br /><em>Kebersamaan tanpa jeda.</em></h1>
           <p class="hero-lead">Meja mahjong otomatis untuk rumah, ruang bermain, dan tempat usaha—lebih rapi, praktis, dan nyaman dimainkan.</p>
           <div class="hero-actions">
             <a class="button button-light" href="https://wa.me/6285931461821?text=Halo%20Tang%20Mahjong%2C%20saya%20ingin%20konsultasi%20mengenai%20meja%20mahjong." target="_blank" rel="noopener">Konsultasi via WhatsApp</a>
-            <a class="text-link" href="#collection">Lihat koleksi <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="#collection">Lihat koleksi</a>
           </div>
           <p class="hours">Setiap hari · 10.00–22.00 WIB</p>
         </div>
         <div class="hero-visual" aria-label="Empat orang bermain di meja Tang Mahjong">
-          <img src="./assets/hero.png" alt="Empat orang bermain menggunakan meja Tang Mahjong di ruang yang elegan" />
-          <div class="hero-stamp"><span>唐</span> Tang Mahjong</div>
+          <img fetchpriority="high" width="1326" height="1186" src="./assets/hero-final.png" alt="Detail meja mahjong otomatis, tiles, dan tangan pemain dilihat dari sudut atas" />
         </div>
       </section>
 
+
+      <section class="use-cases" id="use-cases" aria-labelledby="use-title">
+        <div class="section-heading"><div><p class="eyebrow burgundy">Satu meja, banyak cerita</p><h2 id="use-title">Tempat berkumpul.<br />Cara baru menikmati waktu.</h2></div><p>Geser untuk menemukan inspirasi ruang Anda.</p></div>
+        <div class="case-track" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Inspirasi penggunaan meja mahjong">
+          <article class="case-slide" id="case-1" role="group" aria-label="1 dari 3: Mahjong parlors"><img src="./assets/use-parlor-hd.png" alt="Ruang mahjong premium dengan beberapa meja dan area resepsionis" loading="lazy" width="1536" height="1024" /><div class="case-copy"><p class="eyebrow">01 / Mahjong parlors</p><h3>Ruang untuk setiap pertemuan.</h3><p>Hadirkan pengalaman bermain yang nyaman di mahjong house Anda. Pilih meja dan warna cloth yang selaras dengan karakter ruang.</p></div></article>
+          <article class="case-slide" id="case-2" role="group" aria-label="2 dari 3: Commercial"><img src="./assets/use-commercial.png" alt="Konsep ruang komersial dengan mahjong di tengah, lapangan padel, biliar, dan kafe" loading="lazy" /><div class="case-copy"><p class="eyebrow">02 / Commercial</p><h3>Lebih banyak alasan untuk tinggal.</h3><p>Dari jeda setelah padel hingga waktu santai di kafe atau lounge biliar, mahjong menghadirkan aktivitas bersama dalam satu tempat.</p><small>Ilustrasi konsep ruang.</small></div></article>
+          <article class="case-slide" id="case-3" role="group" aria-label="3 dari 3: Homes"><img src="./assets/use-home.png" alt="Empat teman menikmati permainan mahjong bersama di ruang yang hangat" loading="lazy" /><div class="case-copy"><p class="eyebrow">03 / Homes</p><h3>Jadikan rumah tempat berkumpul.</h3><p>Untuk malam bersama teman maupun waktu keluarga. Meja otomatis membantu permainan terus mengalir, dengan lebih banyak waktu untuk kebersamaan.</p></div></article>
+        </div>
+        <div class="case-controls"><button type="button" id="case-prev" aria-label="Slide sebelumnya" aria-controls="case-1 case-2 case-3">←</button><div class="case-dots" aria-label="Pilih slide"><button type="button" data-slide="0" aria-label="Mahjong parlors" aria-current="true">01</button><button type="button" data-slide="1" aria-label="Commercial">02</button><button type="button" data-slide="2" aria-label="Homes">03</button></div><button type="button" id="case-next" aria-label="Slide berikutnya" aria-controls="case-1 case-2 case-3">→</button><span class="sr-only" id="case-status" aria-live="polite">Slide 1 dari 3</span></div>
+      </section>
       <section class="trust-strip" aria-label="Layanan utama">
         <div><strong>Meja + 144 tiles</strong><span>Siap untuk dimainkan</span></div>
         <div><strong>Gratis pemasangan</strong><span>Berlaku di semua wilayah</span></div>
@@ -48,35 +59,20 @@
         <div><strong>Garansi 1 tahun</strong><span>Pembelian lebih tenang</span></div>
       </section>
 
-      <section class="intro" id="service">
-        <div>
-          <p class="eyebrow burgundy">Kenapa Tang Mahjong</p>
-          <h2>Pilih meja yang pas,<br />tanpa harus menebak-nebak.</h2>
-        </div>
-        <div class="intro-copy">
-          <p>Kami bantu dari pemilihan model, warna cloth, sampai kebutuhan ruang Anda. Untuk rumah maupun mahjong house, semuanya dibicarakan dengan jelas sejak awal.</p>
-          <div class="mini-points">
-            <span>01 · Konsultasi personal</span>
-            <span>02 · Pemasangan oleh tim</span>
-            <span>03 · After-sales support</span>
-          </div>
-        </div>
-      </section>
-
       <section class="collection" id="collection">
         <div class="section-heading">
           <div>
-            <p class="eyebrow">The collection</p>
-            <h2>Dua karakter.<br />Satu pengalaman bermain.</h2>
+            <p class="eyebrow">Koleksi meja otomatis</p>
+            <h2>Temukan meja pilihan Anda.</h2>
           </div>
-          <a class="catalog-link" href="https://wa.me/6285931461821?text=Halo%20Tang%20Mahjong%2C%20boleh%20kirimkan%20katalog%20lengkapnya%3F" target="_blank" rel="noopener">Minta katalog via WhatsApp ↗</a>
+          <a class="catalog-link" href="https://wa.me/6285931461821?text=Halo%20Tang%20Mahjong%2C%20boleh%20kirimkan%20katalog%20lengkapnya%3F" target="_blank" rel="noopener">Minta katalog lengkap</a>
         </div>
 
+        <div class="product-grid">
         <article class="product-card product-lily">
-          <div class="product-image"><img src="./assets/lily.png" alt="Meja mahjong otomatis Lily Series warna champagne" /></div>
+          <div class="product-image"><img loading="lazy" width="960" height="1200" src="./assets/lily.png" alt="Meja mahjong otomatis Lily Series warna champagne" /></div>
           <div class="product-info">
-            <p class="series">01 / Lily series</p>
-            <h3>Elegan, ringan,<br />mudah ditempatkan.</h3>
+            <h3 class="series">Lily Series</h3><p class="product-description">Praktis untuk ruang Anda.</p>
             <p class="price">Rp9.500.000</p>
             <ul>
               <li>144 tiles · Pop-up system</li>
@@ -90,10 +86,9 @@
         </article>
 
         <article class="product-card product-lotus">
-          <div class="product-image"><img src="./assets/lotus.png" alt="Meja mahjong otomatis Lotus Series warna hitam dengan cloth burgundy" /></div>
+          <div class="product-image"><img loading="lazy" width="960" height="1200" src="./assets/lotus.png" alt="Meja mahjong otomatis Lotus Series warna hitam dengan cloth burgundy" /></div>
           <div class="product-info">
-            <p class="series">02 / Lotus series</p>
-            <h3>Lebih lengkap.<br />Dibuat untuk sesi panjang.</h3>
+            <h3 class="series">Lotus Series</h3><p class="product-description">Kenyamanan lebih lengkap.</p>
             <p class="price">Rp11.250.000</p>
             <ul>
               <li>144 tiles · Roller-Coaster System</li>
@@ -105,12 +100,13 @@
             <small>Pre-order · Kursi tidak termasuk</small>
           </div>
         </article>
+        </div>
       </section>
 
       <section class="colours">
         <div class="colour-copy">
-          <p class="eyebrow burgundy">Your table, your colour</p>
-          <h2>Sesuaikan cloth dengan suasana ruang Anda.</h2>
+          <p class="eyebrow burgundy">Pilihan warna cloth</p>
+          <h2>Warna yang menyatu<br />dengan ruang Anda.</h2>
           <p>Pilih warna favorit untuk membuat meja terasa benar-benar menyatu dengan interior rumah atau tempat usaha.</p>
         </div>
         <div class="swatches" aria-label="Pilihan warna cloth">
@@ -124,18 +120,39 @@
         </div>
       </section>
 
-      <section class="business-cta" id="contact">
+      <section class="intro" id="service">
+        <div>
+          <p class="eyebrow burgundy">Kenapa Tang Mahjong</p>
+          <h2>Dari memilih meja,<br />sampai siap bermain.</h2>
+        </div>
+        <div class="intro-copy">
+          <p>Kami bantu dari pemilihan model, warna cloth, sampai kebutuhan ruang Anda. Untuk rumah maupun mahjong house, semuanya dibicarakan dengan jelas sejak awal.</p>
+        </div>
+        <div class="service-steps">
+          <div><span>01</span><h3>Konsultasi personal</h3><p>Diskusikan model, pilihan warna, dan kebutuhan ruang Anda.</p></div>
+          <div><span>02</span><h3>Pemasangan oleh tim</h3><p>Gratis pemasangan untuk membantu meja Anda siap dimainkan.</p></div>
+          <div><span>03</span><h3>Dukungan purnajual</h3><p>Dilengkapi garansi 1 tahun dan dukungan setelah pembelian.</p></div>
+        </div>
+      </section>
+
+<section class="faq" id="faq" aria-labelledby="faq-title"><div><p class="eyebrow burgundy">Pertanyaan yang sering diajukan</p><h2 id="faq-title">Sebelum memilih<br />meja Anda.</h2><p>Masih ada pertanyaan? <a href="https://wa.me/6285931461821" target="_blank" rel="noopener">Konsultasikan dengan kami.</a></p></div><div class="faq-list">
+<details><summary>Apa perbedaan Lily Series dan Lotus Series?</summary><p>Lily Series menggunakan pop-up system, sedangkan Lotus Series menggunakan Roller-Coaster System dan dilengkapi cup holder. Keduanya memiliki fitur pengacakan tiles dan dadu otomatis, meja lipat, roda, phone holder, serta charging station.</p></details>
+<details><summary>Apa saja yang termasuk dalam pembelian?</summary><p>Pembelian mencakup meja dan 144 tiles, gratis pemasangan, serta garansi 1 tahun. Kursi tidak termasuk. Hubungi kami untuk memastikan detail paket model yang Anda pilih.</p></details>
+<details><summary>Apakah tersedia pengiriman dan pemasangan?</summary><p>Gratis pengiriman berlaku untuk wilayah Jakarta, dan pemasangan gratis berlaku di semua wilayah sesuai informasi layanan kami. Untuk pengiriman di luar Jakarta, konfirmasikan cakupan, biaya, dan jadwal melalui WhatsApp sebelum memesan.</p></details>
+<details><summary>Bagaimana cara memesan dan berapa lama pre-order?</summary><p>Hubungi kami melalui WhatsApp untuk memilih seri, warna cloth, dan menyampaikan lokasi pengiriman. Produk tersedia dengan sistem pre-order; estimasi waktu serta ketentuan pemesanan akan dikonfirmasi oleh tim sebelum Anda melanjutkan pesanan.</p></details>
+<details><summary>Apakah meja cocok untuk rumah dan tempat usaha?</summary><p>Ya, meja dapat dipilih untuk rumah, mahjong parlor, kafe, atau area rekreasi komersial. Sampaikan ukuran ruang dan rencana penggunaan agar kami dapat membantu mempertimbangkan model serta penempatan meja. Tersedia tujuh pilihan warna cloth yang ditampilkan pada halaman ini.</p></details>
+</div></section>      <section class="business-cta" id="contact">
         <p class="eyebrow">Untuk rumah & tempat usaha</p>
-        <h2>Mau buka tempat mahjong?</h2>
-        <p>Ceritakan rencana Anda. Kita cari meja yang pas untuk ruang, budget, dan kebutuhan usaha—mulai dari satu meja, ngobrol dulu saja.</p>
-        <a class="button button-light" href="https://wa.me/6285931461821?text=Halo%20Tang%20Mahjong%2C%20saya%20ingin%20konsultasi%20untuk%20membuka%20tempat%20mahjong." target="_blank" rel="noopener">Mulai konsultasi</a>
+        <h2>Meja yang tepat,<br /><em>dimulai dari percakapan.</em></h2>
+        <p>Untuk rumah pribadi maupun rencana membuka tempat mahjong, kami bantu memilih meja sesuai ruang, anggaran, dan kebutuhan Anda.</p>
+        <a class="button button-light" href="https://wa.me/6285931461821?text=Halo%20Tang%20Mahjong%2C%20saya%20ingin%20konsultasi%20pemilihan%20meja%20untuk%20rumah%20atau%20tempat%20usaha." target="_blank" rel="noopener">Mulai konsultasi</a>
         <div class="contact-meta"><span>WhatsApp 0859 3146 1821</span><span>Setiap hari · 10.00–22.00 WIB</span></div>
       </section>
     </main>
 
     <footer>
-      <img src="./assets/logo-white.png" alt="Tang Mahjong" />
-      <p>Premium automatic mahjong tables.</p>
+      <a class="brand" href="#top" aria-label="Tang Mahjong, kembali ke atas"><span class="logo-lockup"><img src="./assets/tang-logo-transparent.png" alt="Tang Mahjong" width="2172" height="724" /></span></a>
+      <nav aria-label="Navigasi footer"><a href="#collection">Koleksi</a><a href="#service">Layanan</a><a href="#use-cases">Inspirasi</a><a href="#faq">FAQ</a><a href="#contact">Konsultasi</a></nav>
       <p>© <span id="year"></span> Tang Mahjong</p>
     </footer>
 
@@ -147,3 +164,4 @@
     <script src="./script.js"></script>
   </body>
 </html>
+
